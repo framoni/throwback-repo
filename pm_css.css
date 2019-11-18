@@ -1,0 +1,199 @@
+.background {
+	border-style: double;
+	border-color: #0000ff;
+	border-radius: 1%;
+	border-width: 10px;
+	position: absolute;
+    width: 380px;
+    height: 380px;
+	background-color: #000000;
+}
+
+.banner {
+	border-style: double;
+	border-color: #0000ff;
+	border-radius: 1%;
+	border-width: 10px;
+	position: absolute;
+    width: 200px;
+    height: 200px;
+	top: 80px;
+	left: 80px;
+	background-color: #000000;
+	font-family: "Candara";
+	font-size: 80px;
+	color: #ffff00;
+	text-align: center;
+}
+
+.cart {
+	position: absolute;
+    width: 80px;
+    height: 80px;
+	animation: move 7s linear infinite;
+	background-color: transparent;
+}
+
+.pacman {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    background-color: #000000;
+	animation: turn 7s steps(4,end)infinite;
+}
+
+.ghost  {
+    position: absolute;
+    width: 78px;
+    height: 78px;
+    border-radius: 50px 50px 0px 0px;
+	animation: move 7s linear infinite;
+	/* animation-delay: 1s; */
+}
+
+#g1 {
+	background-color: #33cc33;
+	animation-delay: 3s;
+}
+
+#g2 {
+	background-color: #ffcccc;
+	animation-delay: 2s;
+}
+
+#g3 {
+	background-color: #ff0000;
+	animation-delay: 1s;
+}
+
+.eye {
+	position: absolute;
+	width: 22px;
+	height: 22px;
+	background-color: #ffffff;
+	border-radius: 100%;
+}
+
+#eye1 {
+	left: 13px;
+	bottom: 40px;
+}
+
+#eye2 {
+	left: 42px;
+	bottom: 40px;
+}
+
+.iris {
+	position: absolute;
+	width: 11px;
+	height: 11px;
+	background-color: #0066ff;
+	border-radius: 100%;
+	left: 12px;
+	top: 5px;
+	animation: eyes_move 7s infinite;
+	/* animation-delay: 0.4s; */
+}
+
+#i1 {
+	animation-delay: 2.4s;
+}
+
+#i2 {
+	animation-delay: 1.4s;
+}
+
+#i3 {
+	animation-delay: 0.4s;
+}
+
+.black_triangle {
+	position: absolute;
+	bottom: 0;
+	width: 0;
+	height: 0;
+	border-right: 13px solid transparent;
+	border-left: 13px solid transparent;
+	border-bottom: 20px solid #000000;
+}
+
+#bt1 {
+	left: 0px;
+}
+
+#bt2 {
+	left: 26px;
+}
+
+#bt3 {
+	left: 52px;
+}
+
+.mouth1 {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    background-color: #ffff00;
+    transform: rotate(45deg);
+    clip: rect(0px, 40px, 80px, 0px);
+	animation-name: nom1;
+	animation-duration: .2s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+.mouth2 {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    background-color: #ffff00;
+    transform: rotate(135deg);
+    clip: rect(0px, 80px, 80px, 40px);
+	animation-name: nom2;
+	animation-duration: .2s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+@keyframes nom1 {
+	from {transform: rotate(45deg);}
+	to {transform: rotate(90deg);}
+}
+
+@keyframes nom2 {
+	from {transform: rotate(135deg);}
+	to {transform: rotate(90deg);}
+}
+
+@keyframes turn {
+	from {transform: rotate(0deg);}
+	to {transform: rotate(360deg);}
+}
+
+@keyframes move {
+  0%   {left:0px; top:0px;}
+  25%  {left:300px; top:0px;}
+  50%  {left:300px; top:300px;}
+  75%  {left:0px; top:300px;}
+  100% {left:0px; top:0px;}
+}
+
+@keyframes eyes_move {
+  0%   {left:12px; top:5px;}
+  25%  {left:12px; top:5px;}
+  50%  {left:5px; top:12px;}
+  70%  {left:0px; top:5px;}
+  100% {left:5px; top:0px;}
+}
+
+/* @keyframes eyes_move { */
+  /* 0%   {left:12px; top:5px;} /* right */ */
+  /* 25%  {left:5px; top:15px;} /* down */ */
+  /* 50%  {left:0px; top:5px;} /* left */ */
+  /* 70%  {left:5px; top:0px;} /* up */ */
+  /* 100% {left:12px; top:5px;} /* right */ */
+/* } */
